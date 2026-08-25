@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",                             // racine commune des sources à compiler (doit être plus large que "include")
+    "outDir": "./dist",                             // destination des fichiers compilés
+    "module": "nodenext",                           // nodenext est version stable en aout 2026
+    "target": "ES2022",                             // ES2022 est version stable en aout 2026
+    "types": ["node"],                              // ajouter d'autres types si nécessaire (types installés par npm install -D @types/NOM_TYPE)
+    //"jsx": "react-jsx",                           // pour react
+
+    // options de mapping
+    "sourceMap": true,                              // crée le mapping ts->js dans ./dist/ (sufixe en .map)
+    "declaration": true,                            // crée les types, nécessaire pour un sdk, inutile sinon (sufixe en .d.ts)
+    "declarationMap": true,                         // crée les liens pour vscode (sufixe en .d.ts.map)
+
+    // options de vérification synthaxique
+    "strict": true,
+    "noUncheckedIndexedAccess": true,               // avec true, un élément d'array peut être 'string | undefined', sinon 'string' seulement
+    "exactOptionalPropertyTypes": true,             // avec true, un objet indexé peut être 'number | undefined', sinon 'number' seulement
+    "noImplicitReturns": true,                      // vérifie que toutes les bracnhes d'une fonction retourne une valeur
+    "noImplicitOverride": true,                     // oblige à écrire 'overide' quand on surcharge une méthode
+    //"noUnusedLocals": true,                       // interdit les variables non utilisées
+    //"noUnusedParameters": true,                   // idem pour les arguments de fonction
+    "noFallthroughCasesInSwitch": true,             // oblige la présence des 'break' dans les switch/case
+    //"noPropertyAccessFromIndexSignature": true,   // oblige à distinguer les interfaces des propriétés
+
+    // options d'imports et de gestions des conflits avec autres modules
+    "verbatimModuleSyntax": true,                   // pour distinguer les imports des types de ceux du js
+    "isolatedModules": true,                        // vérifie que les fichiers .ts peuvent être compilés indépendament les uns des autres
+    "noUncheckedSideEffectImports": true,           // vérifie que les modules importés existent vraiement (évite fautes de frappe)
+    "moduleDetection": "force",                     // tout fichier est considéré module (évite les conflits de variables)
+    "skipLibCheck": false,                          // true: compilation rapide mais ne gère pas tous les conflits externes
+    "esModuleInterop": true                         // pour autoriser les différentes synthaxe d'imports modernes
+  },
+  "include":["src", "src/index.ts"]
+}

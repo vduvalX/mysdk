@@ -1,0 +1,25 @@
+{
+  "name": "mysdk",
+  "version": "0.0.1",
+  "description": "essai de SDK",
+  "keywords": ["SDK"],
+  "author": "Vincent Duval",
+  "license": "UNLICENSED",
+  "private": false,
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/index.ts", 
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.3.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

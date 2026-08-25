@@ -1,0 +1,7 @@
+.env
+.env.*
+dist/
+build/
+NOTES_PERSO.md
+package-lock.json
+node_modules
