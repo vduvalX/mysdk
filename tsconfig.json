@@ -3,6 +3,7 @@
     "rootDir": "./src",                             // racine commune des sources à compiler (doit être plus large que "include")
     "outDir": "./dist",                             // destination des fichiers compilés
     "module": "nodenext",                           // nodenext est version stable en aout 2026
+    //"moduleResolution": "NodeNext",               // moduleResolution=nodenext découle automatiquement de module=nodenext
     "target": "ES2022",                             // ES2022 est version stable en aout 2026
     "types": ["node"],                              // ajouter d'autres types si nécessaire (types installés par npm install -D @types/NOM_TYPE)
     //"jsx": "react-jsx",                           // pour react

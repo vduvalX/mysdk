@@ -1,7 +1,29 @@
+# dépendances
+node_modules
+
+# variables env
 .env
 .env.*
+!.env.example
+
+# build
 dist/
 build/
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ide
+*.tsbuildinfo
+.vscode/
+
+# temp
+tmp/
+temp/
+
+# perso
 NOTES_PERSO.md
-package-lock.json
-node_modules

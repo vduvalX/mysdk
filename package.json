@@ -1,12 +1,12 @@
 {
   "name": "mysdk",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "essai de SDK",
   "keywords": ["SDK"],
   "author": "Vincent Duval",
   "license": "UNLICENSED",
   "private": false,
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
