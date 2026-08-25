@@ -1,15 +1,15 @@
 {
   "name": "mysdk",
-  "version": "0.1.0",
-  "description": "essai de SDK",
-  "keywords": ["SDK"],
+  "version": "0.1.1",
+  "description": "SDK expérimental de gestion d'utilisateurs sans appels d'API",
+  "keywords": ["SDK", "users"],
   "author": "Vincent Duval",
   "license": "UNLICENSED",
   "private": false,
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node test/utilisation.js",
     "dev": "tsx watch src/index.ts", 
     "build": "tsc",
     "start": "node dist/index.js"

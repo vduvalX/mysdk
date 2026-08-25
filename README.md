@@ -2,7 +2,8 @@
 # PRESENTATION
 
 SDK qui permet de gérer les utilisateurs d'un domaine donné.
-nom de de domaine par défaut : 'mesdonneesadministratives.fr'
+
+Nom de de domaine par défaut : 'mesdonneesadministratives.fr'.
 
 
 ## Instanciation du SDK
@@ -26,9 +27,9 @@ nom de de domaine par défaut : 'mesdonneesadministratives.fr'
 
  ### modifier le nom de domaine pour les futurs utilisateurs inscrits
  ```typescript
-    client.setDomainName('nouveauNomDeDomaine.fr')
+    const newDomainName = client.setDomainName('nouveauNomDeDomaine.fr')
     //ou
-    const domainName = client.setDomainName('nouveauNomDeDomaine.fr')
+    client.setDomainName('nouveauNomDeDomaine.fr')    
 ```
 
 ### lister les utilisateurs
@@ -45,12 +46,16 @@ nom de de domaine par défaut : 'mesdonneesadministratives.fr'
 ### supprimer un utilisateur
 ```typescript
     const deletedUser = client.users.delete(rang: number)
-    si rang non précisé, un utilisateur aléatoire est supprimé
+    //ou
+    client.users.delete(rang: number)   
+    //si rang non précisé, un utilisateur aléatoire est supprimé
 ```
 
 ### créer un utilisateur
 ```typescript
     const newUser = client.users.create({ firstName: 'John', lastName: 'Doe', domainName: 'nouveauNomDeDomaine.fr', email: 'john.doe@example.com' })
+    //ou
+    client.users.create({ firstName: 'John', lastName: 'Doe', domainName: 'nouveauNomDeDomaine.fr', email: 'john.doe@example.com' })
     // si domainName non précisé, le nom de domaine du client est utilisé
     // si email non précisé, l'email est généré automatiquement à partir du prénom, nom et nom de domaine
     // si email précisé, il est utilisé tel quel et écrase le nom de domaine précisé, ainsi que firstName et lastName précisés
@@ -58,9 +63,9 @@ nom de de domaine par défaut : 'mesdonneesadministratives.fr'
 
 ### supprimer tous les utilisateurs
 ```typescript
-    client.users.deleteAll()
-    //ou
     const emptyList: Array<User> = client.users.deleteAll()
+    //ou
+    client.users.deleteAll()    
 ```
  
 ### modifier un utilisateur
@@ -68,6 +73,8 @@ nom de de domaine par défaut : 'mesdonneesadministratives.fr'
     const modifiedUser = client.users.modify(
         rang: number,
         { firstName: 'Jane', lastName: 'Doe', email: 'jane.doe@example.com' })
+    //ou
+    client.users.modify(rang: number, { firstName: 'Jane', lastName: 'Doe', email: 'jane.doe@example.com' })
     // si domainName non précisé, le nom de domaine du client est utilisé
     // si email non précisé, l'email est généré automatiquement à partir du prénom, nom et nom de domaine
     // si email précisé, il est utilisé tel quel et écrase le nom de domaine précisé, ainsi que firstName et lastName précisés
