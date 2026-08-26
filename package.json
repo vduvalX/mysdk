@@ -1,18 +1,21 @@
 {
   "name": "mysdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "SDK expérimental de gestion d'utilisateurs sans appels d'API",
-  "keywords": ["SDK", "users"],
+  "keywords": ["SDK", "users", "publication", "experimental"],
   "author": "Vincent Duval",
   "license": "UNLICENSED",
   "private": false,
   "type": "module",
   "main": "index.js",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist"],
   "scripts": {
     "test": "node test/utilisation.js",
     "dev": "tsx watch src/index.ts", 
-    "build": "tsc",
-    "start": "node dist/index.js"
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "prepare": "npm run build"
   },
   "devDependencies": {
     "@types/node": "^26.3.0",
