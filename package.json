@@ -1,6 +1,6 @@
 {
   "name": "mysdk",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "SDK expérimental de gestion d'utilisateurs sans appels d'API",
   "keywords": ["SDK", "users", "publication", "experimental"],
   "author": "Vincent Duval",

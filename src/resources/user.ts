@@ -36,7 +36,7 @@ export class Users extends Array<User> {
         return deletedUser
     }
     
-    deleteAll() { this.client.users.length = 0; return [ ] }
+    deleteAll() { this.client.users.length = 0; return this.client.users }
 
     modify(index: number, data: { firstName?: string; lastName?: string; email?: string; domainName?: string }) {
         const nb = this.client.users.length

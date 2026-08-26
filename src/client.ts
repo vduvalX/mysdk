@@ -1,7 +1,7 @@
 
 import { Users, type User } from './resources/user.js'
 
-type SDKOptions = {
+export type SDKOptions = {
     //apiKey: string
     //baseUrl?: string
     domainName?: string
@@ -24,7 +24,7 @@ export class Client {
 
     public setDomainName(domainName: string): string { this.domainName = domainName; return this.domainName }
 
-    public get users(): Array<User> { return this.usersResource }        
+    public get users(): Users { return this.usersResource }        
 }
 
 

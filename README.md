@@ -74,7 +74,7 @@ depuis github public
 
 ### supprimer tous les utilisateurs
 ```typescript
-    const emptyList: Array<User> = client.users.deleteAll()
+    const emptyList: Users = client.users.deleteAll()
     //ou
     client.users.deleteAll()    
 ```
