@@ -16,7 +16,7 @@ export class Client {
     constructor(options: SDKOptions) {
         //this.apiKey = apiKey
         //this.baseUrl = baseUrl
-        this.domainName = options.domainName ?? 'mesdonneesadministratives.fr'
+        this.domainName = options.domainName ?? 'example.com'
         this.usersResource = new Users(this)
     }
     

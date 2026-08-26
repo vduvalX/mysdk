@@ -1,16 +1,27 @@
 
 # PRESENTATION
 
-SDK qui permet de gérer les utilisateurs d'un domaine donné.
+SDK qui permet de gérer les utilisateurs d'un domaine
 
-Nom de de domaine par défaut : 'mesdonneesadministratives.fr'.
+Nom de de domaine par défaut : 'example.com'
+
+Actuellement v1.0.0: SDK public publié seulement sur github
+
+
+## Installation du SDK
+
+depuis github public
+
+```bash
+    npm install github:vduvalX/mysdk
+```
 
 
 ## Instanciation du SDK
 
 ```typescript
-    import { Client } from 'mySDK'      // à modifier selon publication
-    import type { User } from 'mySDK'   // à modifier selon publication
+    import { Client } from 'mysdk'
+    import type { User } from 'mysdk'
 
     const client = new Client(domainName: string)
 
@@ -18,7 +29,7 @@ Nom de de domaine par défaut : 'mesdonneesadministratives.fr'.
     const client2 = new Client(otherDomainName: string)
 ```
 
-## Utilisation
+## Consommation du SDK
 
 ### récupérer le nom de domaine
 ```typescript

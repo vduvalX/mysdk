@@ -1,6 +1,6 @@
 {
   "name": "mysdk",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "SDK expérimental de gestion d'utilisateurs sans appels d'API",
   "keywords": ["SDK", "users", "publication", "experimental"],
   "author": "Vincent Duval",
@@ -12,7 +12,7 @@
   "files": ["dist"],
   "scripts": {
     "test": "node test/utilisation.js",
-    "dev": "tsx watch src/index.ts", 
+    "dev": "tsx watch src/index.ts",
     "build": "tsc -p tsconfig.json",
     "start": "node dist/index.js",
     "prepare": "npm run build"
